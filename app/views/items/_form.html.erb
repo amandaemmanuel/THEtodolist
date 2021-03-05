@@ -1,4 +1,5 @@
 <%= form_for([@list, @list.items.build]) do |form| %>
+    <%= form.check_box :status, {}, true, false  %>
     <%= form.text_field :description, placeholder: "New Item" %>
     <%= form.submit %>
 <% end %>

@@ -13,6 +13,7 @@
 <%# Incorporating the List's respective items %>
 <div id="items_wrapper">
   <%= render @list.items %> <%# Display respective items %>
+  <%= link_to 'Delete', lists_path %>
   <div id="form">
     <%= render "items/form" %> <%# Form to add new items %>
   </div>
