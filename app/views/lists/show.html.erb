@@ -10,5 +10,13 @@
   <%= @list.description %>
 </p>
 
+<%# Incorporating the List's respective items %>
+<div id="items_wrapper">
+  <%= render @list.items %> <%# Display respective items %>
+  <div id="form">
+    <%= render "items/form" %> <%# Form to add new items %>
+  </div>
+</div>
+
 <%= link_to 'Edit', edit_list_path(@list) %> |
 <%= link_to 'Back', lists_path %>

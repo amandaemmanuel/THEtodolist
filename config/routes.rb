@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :lists
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  resources :lists do
+    resources :items
+  end
+  
+  #making the page of lists the index page (the root is the lists controller, index method/action)
   root to: "lists#index"
 end
